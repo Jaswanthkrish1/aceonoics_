@@ -1,0 +1,46 @@
+
+.text-color{
+    color: white;
+    }
+::ng-deep .ant-table table {
+    width: 100%;
+    text-align: left;
+    border-radius: 2px 2px 0 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid gray;
+}
+::ng-deep ant-layout-header {
+    height: 64px;
+    padding: 0 50px;
+    color: #fff;
+    line-height: 64px;
+background: unset !important;}
+
+::ng-deep.ant-table-thead > tr > th {
+    position: relative;
+    padding: 1px 10px;
+    overflow-wrap: break-word;}
+
+::ng-deep .ant-input {
+        padding: 2px;
+ }
+    
+::ng-deep.ant-input-group-wrapper {
+    display: inline-block;
+    width: 100%;
+    text-align: start;
+    vertical-align: top;
+    padding: 5px;
+}
+.nz-table tbody tr {
+    height: 10px; /* Decrease the height of table rows */
+  }
+
+.createbutton{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: unset;
+    font-size: 19px;
+}

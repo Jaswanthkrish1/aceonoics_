@@ -1,0 +1,51 @@
+
+css
+.logo-img path {
+    fill: #ea1919;
+  }
+.body{
+    background-color: rgba(0, 0, 0, 0.99);
+}
+.login-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100vh !important;
+  background-color: black;
+}
+ .card {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #211919;
+  border-radius: 5px;
+  margin: 0 auto; /* Add this line to center the card horizontally */
+   /* Add this line to center the card vertically */
+  background: rgba(0, 0, 0, 0.85);
+}
+ .form-group {
+  margin-bottom: 10px;
+}
+ label {
+  display: block;
+  margin-bottom: 5px;
+}
+ input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+ button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* login css */
+
+

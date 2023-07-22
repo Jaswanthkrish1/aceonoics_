@@ -1,0 +1,135 @@
+<!-- 
+  
+
+    <nz-layout class="app-layout">
+      <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed"
+        [nzTrigger]="null">
+        <div class="sidebar-logo">
+          <a href="https://ng.ant.design/" target="_blank">
+            <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
+            <h1>ACEONICS</h1>
+          </a>
+        </div>
+        <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+          <li nzMatchRouter routerLink="/dashboard" nz-submenu nzTitle=" Dashboard" nzIcon="dashboard">
+          <li nz-submenu nzOpen nzTitle="Users" nzIcon="user">
+            <ul>
+              <li nz-menu-item nzMatchRouter>
+                <a routerLink="/users">Users</a>
+              </li>
+              <li nz-menu-item nzMatchRouter>
+                <a routerLink="/user">My Profile</a>
+              </li>
+              <li nz-menu-item nzMatchRouter>
+                <a routerLink="/create-user">Create User</a>
+              </li>
+              <li nz-menu-item nzMatchRouter>
+                <a routerLink="/update-user">Update User</a>
+              </li>
+            </ul>
+          </li>
+          <li nz-submenu nzOpen nzTitle="Todos" nzIcon="unordered-list">
+          </li>
+        </ul>
+      </nz-sider>
+      <nz-layout>
+        <nz-header>
+          <div class="app-header">
+            <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+              <span class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></span>
+            </span>
+          </div>
+        </nz-header>
+        <nz-content>
+          <div class="inner-content">
+            <router-outlet></router-outlet>
+          </div>
+        </nz-content>
+      </nz-layout>
+    </nz-layout>
+     -->
+
+     <nz-layout class="app-layout" >
+      <nz-header class="header">
+        <div class="header-content  " >
+      <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+      <span class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></span>
+      <span class="logo">
+        <img src="../../assets/logo-full.png" alt="img tag" class="logo" >
+        
+      </span>
+      
+    </span>
+  </div>
+      <div class="logout-icon">
+        <span nz-icon nzType="skin" nzTheme="outline" style="margin-right: 20px;"></span>
+         <span nz-icon nzType="logout" nzTheme="outline"></span>
+  </div>
+     
+      </nz-header>
+      <nz-layout class="black-color" >
+        <nz-sider nzWidth="250px"  nzMode="inline" [(nzCollapsed)]="isCollapsed" class="black-color" >
+          
+          <ul nz-menu  nzMode="inline" [nzInlineCollapsed]="isCollapsed" >
+            
+            <li nzMatchRouter routerLink="/dashboard" nz-submenu nzTitle=" Dashboard" nzIcon="dashboard" class="black-color" >
+            <li nz-submenu nzOpen nzTitle="Users" nzIcon="user"  >
+              <ul >
+                
+                <li nz-menu-item nzMatchRouter>
+                  <a  routerLink="/users">Users</a>
+                </li>
+                <!-- <li nz-menu-item nzMatchRouter>
+                  <a routerLink="/user">My Profile</a>
+                </li> -->
+                <li nz-menu-item nzMatchRouter>
+                  <a routerLink="/create-user">Create User</a>
+                </li>
+                <!-- <li nz-menu-item nzMatchRouter>
+                  <a routerLink="/update-user">Update User</a>
+                </li> -->
+              </ul>
+            </li>
+            <li nz-submenu nzOpen nzTitle="Todos" nzIcon="unordered-list">
+              <ul >
+                
+                <li nz-menu-item nzMatchRouter>
+                  <a  routerLink="/Task-Todo">Todos</a>
+                </li>
+                <li nz-menu-item nzMatchRouter>
+                  <a routerLink="/View-Todo">View-Todo</a>
+                </li>
+                <li nz-menu-item nzMatchRouter>
+                  <a routerLink="/Create-Todo">Create-Todo</a>
+                </li>
+                <li nz-menu-item nzMatchRouter>
+                  <a routerLink="/Update-Todo">Update-Todo</a>
+                </li>
+              </ul>
+            </li>
+         
+          </ul>
+          
+          
+        </nz-sider>
+        <nz-layout class="inner-layout"  >
+          <div class="inner-content" nzTheme="dark" style="background-color: #000000;">
+           <span nz-icon nzType="home"></span><span style="padding: 8px; margin-bottom: 10px;">{{url}}</span>
+            <div class="navigation" style="display: flex;">
+              
+                <div class="site-page-header-ghost-wrapper">
+                  <nz-page-header nzBackIcon [nzGhost]="false">
+                    <nz-page-header-title>  <nz-breadcrumb [nzAutoGenerate]="true" [nzRouteLabel]="'breadcrumb'"></nz-breadcrumb></nz-page-header-title>
+                  </nz-page-header>
+                </div>
+        
+           
+            </div>
+              
+          
+            <router-outlet ></router-outlet>
+          </div>
+         
+        </nz-layout>
+      </nz-layout>
+    </nz-layout>

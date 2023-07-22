@@ -1,0 +1,36 @@
+
+<div class="buttons">
+  <button nz-button class="create" nzType="primary" (click)=" Createuserpage()" style="margin-right: 5px;">
+    <span nz-icon nzType="plus" nzTheme="outline"></span>Create</button>
+    <button nz-button class="create" nzType="primary" (click)="Updatepage()">
+      <span nz-icon nzType="edit" nzTheme="outline"></span>Update</button>
+  </div>
+
+      
+      <nz-input-group nzCompact>
+        <input type="text" nz-input [ngModel]="'Id'"class="background" />
+        <input type="text" nz-input [ngModel]="id" class="width" />
+      </nz-input-group>
+
+      <nz-input-group nzCompact>
+        <input type="text" nz-input [ngModel]="'Email'" class="background" />
+        <input type="text" nz-input [ngModel]="email" class="width" />
+      </nz-input-group>
+      
+      <nz-input-group nzCompact>
+        <input type="text" nz-input [ngModel]="'Name'" class="background" />
+        <input type="text" nz-input [ngModel]="name" class="width" />
+      </nz-input-group>
+
+      <nz-input-group nzCompact>
+        <input type="text" nz-input [ngModel]="'Created At'" class="background" />
+        <input type="text" nz-input [ngModel]="createdat" class="width" />
+      </nz-input-group>
+
+      <nz-input-group nzCompact>
+        <input type="text" nz-input [ngModel]="'Updated At'" class="background" />
+        <input type="text" nz-input [ngModel]="updatedat" class="width" />
+      </nz-input-group>
+
+      
+      

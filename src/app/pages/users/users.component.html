@@ -1,0 +1,75 @@
+<div class="createbutton"><button nz-button class="create" nzType="primary" routerLink="/create-user"><span nz-icon nzType="plus" nzTheme="outline"></span>create</button></div>
+<nz-table #sortTable [nzData]="listOfData" style=" margin-top: 25px" >
+    <thead>
+        <tr>
+            <th *ngFor="let column of listOfColumn"
+             
+             
+             style="    padding: 10px;">
+                {{ column.title }}
+            </th>
+
+        </tr>
+        <tr>
+            <th>
+                <nz-input-group nzAddOnBefore="#" >
+                    <input type="text" nz-input [(ngModel)]="inputid" (ngModelChange)="findbyid(inputid)"/>
+
+                </nz-input-group>
+            </th>
+
+            <th>
+
+                <!-- <nz-input-group nzAddOnBeforeIcon="user" >
+                    <input type="text" nz-input [(ngModel)]="inputValue" />
+                </nz-input-group>  -->
+                <nz-input-group>
+                    <input type="text" nz-input  [(ngModel)]="inputemail" (ngModelChange)="findbyemail(inputemail)" />
+                </nz-input-group>
+            </th>
+            <th>
+                <nz-input-group>
+                    <input type="text" nz-input [(ngModel)]="inputname"  (ngModelChange)="findbyname(inputname)"  />
+                </nz-input-group>
+            </th>
+            <th>
+                
+            </th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let data of sortTable.data">
+            <td class="text-color"><a (click)="ViewUser(data.id)">{{ data.id }}</a></td>
+            <td class="text-color">{{ data.email}}</td>
+            <td class="text-color">{{ data.name }}</td>
+            <td > 
+                <a nz-dropdown [nzDropdownMenu]="menu" class="text-color" style="border: 1px solid gray;
+                padding: 4px;">
+                Actions
+                <span nz-icon nzType="down"></span>
+               
+                </a>
+               
+              <nz-dropdown-menu #menu="nzDropdownMenu">
+                <ul class="text-color" nz-menu nzSelectable>
+                  <li nz-menu-item ><a class="text-color" (click)="ViewUser(data.id)"  >Details </a></li>
+                  <li nz-menu-item><a class="text-color" (click)="update(data.id)">Update</a></li>
+                  <!-- delete oparation -->
+                  <li nz-menu-item nzDanger 
+                    nz-popconfirm
+                    nzPopconfirmTitle="Are you sure delete this user"
+                    nzPopconfirmPlacement="bottom"
+                    (nzOnConfirm)="deleteuser( data.id )"
+                    (nzOnCancel)="cancel()"
+                  >
+                    Delete
+                  </li>
+                </ul>
+              </nz-dropdown-menu></td>
+             
+        </tr>
+    </tbody>
+   
+</nz-table>
+<router-outlet></router-outlet>
+<!--  -->
